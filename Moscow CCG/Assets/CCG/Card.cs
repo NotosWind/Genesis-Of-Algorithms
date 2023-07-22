@@ -12,7 +12,7 @@ public class Card : MonoBehaviour
         Equipment,
         Trap
     }
-
+    
     public string cardName;
     public int cost;
     public Sprite artwork;
@@ -29,12 +29,12 @@ public class Card : MonoBehaviour
     {
         this.cardName = name;
         this.attack = attack;
-        this.health = health;
-        this.type = type;
+        this.maxHealth = health;
+        //this.type = type
 
-        if (display != null)
-        {
-            display.UpdateCard();
-        }
+        // if (display != null)
+        // {
+        //     display.UpdateCard();
+        // }
     }
 }

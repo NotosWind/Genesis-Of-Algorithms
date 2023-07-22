@@ -15,7 +15,7 @@ public class CardDisplay : MonoBehaviour
     {
         nameText.text = card.cardName;
         attackText.text = card.attack.ToString();
-        healthText.text = card.health.ToString();
-        typeText.text = card.type.ToString();
+        healthText.text = card.maxHealth.ToString();
+        //typeText.text = card.type.ToString();
     }
 }

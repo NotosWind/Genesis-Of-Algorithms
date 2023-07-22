@@ -12,9 +12,9 @@ public class HealAction : CardAction
         // Implement the logic for the heal action here
         // For example, you can increase the card's health by the heal amount
         card.currentHealth += healAmount;
-        if (card.currentHealth > card.cardSO.maxHealth)
+        if (card.currentHealth > target.maxHealth)
         {
-            card.currentHealth = card.cardSO.maxHealth;
+            card.currentHealth = target.maxHealth;
         }
     }
 }

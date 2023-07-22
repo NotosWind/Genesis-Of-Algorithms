@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
         deck.Shuffle();
         for (int i = 0; i < 5; i++)
         {
-            Card card = deck.DrawCard();
+            Card card = deck.Draw();
             hand.AddCard(card);
         }
         turnManager.isPlayerTurn = true;
@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         turnManager.EndTurn();
         if (turnManager.isPlayerTurn)
         {
-            Card card = deck.DrawCard();
+            Card card = deck.Draw();
             hand.AddCard(card);
         }
     }

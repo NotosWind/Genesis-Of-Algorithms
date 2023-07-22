@@ -11,8 +11,8 @@ public class AttackAction : CardAction
     {
         // Implement the logic for the attack action here
         // For example, you can decrease the target card's health by the damage amount
-        Card targetCard = // get the target card
-        targetCard.currentHealth -= damage;
+
+        Card targetCard = target;
     }
 
 }
