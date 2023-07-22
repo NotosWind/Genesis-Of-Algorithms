@@ -4,14 +4,6 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    public CardSO cardSO;
-    public int currentHealth;
-
-    private void Start()
-    {
-        currentHealth = cardSO.maxHealth;
-    }
-    
     public enum CardType
     {
         Leader,
@@ -21,11 +13,17 @@ public class Card : MonoBehaviour
         Trap
     }
 
-    public CardType type;
     public string cardName;
+    public int cost;
+    public Sprite artwork;
     public int attack;
-    public int health;
-    public CardDisplay display;
+    public int maxHealth;
+    public int currentHealth;
+
+    private void Start()
+    {
+        currentHealth = maxHealth;
+    }
 
     public void InitializeCard(string name, int attack, int health, CardType type)
     {
