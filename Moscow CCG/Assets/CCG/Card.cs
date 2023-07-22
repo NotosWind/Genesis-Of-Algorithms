@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
+    public CardSO cardSO;
+    public int currentHealth;
+
+    private void Start()
+    {
+        currentHealth = cardSO.maxHealth;
+    }
+    
     public enum CardType
     {
         Leader,
