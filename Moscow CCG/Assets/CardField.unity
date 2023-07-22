@@ -3500,7 +3500,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -4775,12 +4775,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5e5c850d8fb7642b3c407ddc081928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cards:
-  - {fileID: 8207337123352689386, guid: e5d7e55d5cbc4dd4aad0fbb127e19795, type: 3}
-  - {fileID: 8207337123352689386, guid: e5d7e55d5cbc4dd4aad0fbb127e19795, type: 3}
-  - {fileID: 8207337123352689386, guid: e5d7e55d5cbc4dd4aad0fbb127e19795, type: 3}
-  - {fileID: 8207337123352689386, guid: e5d7e55d5cbc4dd4aad0fbb127e19795, type: 3}
-  - {fileID: 8207337123352689386, guid: e5d7e55d5cbc4dd4aad0fbb127e19795, type: 3}
+  cardDataList: []
+  cardPrefab: {fileID: 0}
   drawButton: {fileID: 1671229000}
 --- !u!4 &1219731479
 Transform:
