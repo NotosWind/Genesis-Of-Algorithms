@@ -2,57 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Card", menuName = "Card")]
-public class Card : ScriptableObject
+public class Card : MonoBehaviour
 {
-    public new string name;
-    public int cost;
+    public enum CardType
+    {
+        Leader,
+        Supporter,
+        Effect,
+        Equipment,
+        Trap
+    }
+
+    public CardType type;
+    public string cardName;
     public int attack;
     public int health;
-    public Sprite cardImage;
-    public CardEffect effect;
-    public CardType cardType;
-    public Sprite cardback;
+    public CardDisplay display;
 
-    public int GetAttack()
+    public void InitializeCard(string name, int attack, int health, CardType type)
     {
-        return attack + (effect != null ? effect.attackModifier : 0);
-    }
+        this.cardName = name;
+        this.attack = attack;
+        this.health = health;
+        this.type = type;
 
-    public int GetHealth()
-    {
-        return health + (effect != null ? effect.healthModifier : 0);
-    }
-
-    private CardDisplay cardDisplay;
-
-    public void Init(CardDisplay cardDisplay)
-    {
-        this.cardDisplay = cardDisplay;
-    }
-
-    public void DealDamage(int damage)
-    {
-        health -= damage;
-        if (health <= 0)
+        if (display != null)
         {
-            cardDisplay.Die();
+            display.UpdateCard();
         }
     }
-
-    public void TakeDamage(int damage)
-    {
-        attack -= damage;
-        if (attack <= 0)
-        {
-            cardDisplay.Die();
-        }
-    }
-
-}
-
-public enum CardType
-{
-    Spell,
-    Minion
 }
