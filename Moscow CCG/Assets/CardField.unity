@@ -3137,7 +3137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70cb9d4d7c80121478b41c8072440497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handZone: {fileID: 1504226746}
+  handZone: {fileID: 0}
 --- !u!4 &736701624
 Transform:
   m_ObjectHideFlags: 0
@@ -4775,9 +4775,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5e5c850d8fb7642b3c407ddc081928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardDataList: []
-  cardPrefab: {fileID: 0}
-  drawButton: {fileID: 1671229000}
+  cardDataList:
+  - cardName: Jo
+    attack: 3
+    health: 5
+    quantity: 1
+  - cardName: 5
+    attack: 2
+    health: 3
+    quantity: 1
+  cardPrefab: {fileID: 1660842845}
+  drawButton: {fileID: 1058349472}
 --- !u!4 &1219731479
 Transform:
   m_ObjectHideFlags: 0
@@ -6111,7 +6119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd18bc077be59f3488cd40fa78715830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentState: 0
 --- !u!4 &1543658337
 Transform:
   m_ObjectHideFlags: 0
@@ -6132,6 +6139,12 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8207337123352689387, guid: e5d7e55d5cbc4dd4aad0fbb127e19795,
     type: 3}
   m_PrefabInstance: {fileID: 8207337124179996424}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1660842845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8207337123352689386, guid: e5d7e55d5cbc4dd4aad0fbb127e19795,
+    type: 3}
+  m_PrefabInstance: {fileID: 1393556490}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1671228998
 GameObject:

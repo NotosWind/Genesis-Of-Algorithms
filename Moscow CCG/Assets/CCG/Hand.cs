@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Hand : MonoBehaviour
 {
-    public List<Card> cards;
+    public Transform handZone;
 
-    public void AddCard(Card card)
+    public void AddCardToHand(GameObject card)
     {
-        cards.Add(card);
-    }
+        Deck deck = FindObjectOfType<Deck>();
+        Button shuffleButton = GameObject.Find("ShuffleButton").GetComponent<Button>();
+        Button drawButton = GameObject.Find("DrawButton").GetComponent<Button>();
 
-    public void RemoveCard(Card card)
-    {
-        cards.Remove(card);
+        Vector3 originalScale = card.transform.localScale; // Save the original scale
+        GameObject newCard = Instantiate(card, handZone);
+        newCard.GetComponent<CardDisplay>().deck = deck;
+        // newCard.GetComponent<CardDisplay>().hand = hand;
+        newCard.GetComponent<CardDisplay>().shuffleButton = shuffleButton;
+        newCard.GetComponent<CardDisplay>().drawButton = drawButton;
+        newCard.transform.localScale = originalScale; // Set the scale of the instantiated card to the original scale
     }
 }
